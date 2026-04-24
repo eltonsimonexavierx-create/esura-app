@@ -8,42 +8,47 @@
 </head>
 <body style="margin: 0; background: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: -apple-system, sans-serif;">
 
-    <!-- Card Comprimido: Largura reduzida para 190px para parecer "magro" -->
-    <div style="width: 190px; padding: 25px 15px; border: 1px solid #eee; border-radius: 20px; background: #fff; text-align: center;">
+    <!-- Card Ultra Magro: Largura de 165px cria o efeito de coluna alta -->
+    <div style="width: 165px; padding: 40px 10px; border: 1px solid #f0f0f0; border-radius: 30px; background: #fff; text-align: center; box-sizing: border-box;">
         
-        <img src="{% static 'img/logo_ujc.png' %}" style="width: 85px; margin-bottom: 12px;">
+        <!-- Logo proporcional à largura magra -->
+        <img src="{% static 'img/logo_ujc.png' %}" style="width: 70px; margin-bottom: 20px;">
         
-        <h2 style="font-size: 11px; font-weight: 700; margin: 0; color: #444;">Bem-vindo ao</h2>
-        <h1 style="font-size: 14px; font-weight: 800; margin: 0 0 20px 0; color: #000;">ESURA</h1>
+        <h2 style="font-size: 10px; font-weight: 700; margin: 0; color: #555;">Bem-vindo ao</h2>
+        <h1 style="font-size: 13px; font-weight: 800; margin: 0 0 30px 0; color: #000;">ESURA</h1>
 
         <form method="POST" style="text-align: left;">
             {% csrf_token %}
             
-            <div style="margin-bottom: 12px;">
-                <label style="font-size: 10px; color: #666; display: block; margin-bottom: 5px; margin-left: 5px;">Utilizador/Email</label>
-                <input type="text" name="username" placeholder="Digite o Utilizador" required 
-                       style="width: 100%; padding: 6px 12px; border: 1px solid #ddd; border-radius: 20px; box-sizing: border-box; font-size: 10px; outline: none;">
+            <!-- Campo Utilizador Reduzido -->
+            <div style="margin-bottom: 15px;">
+                <label style="font-size: 9px; color: #777; display: block; margin-bottom: 6px; font-weight: bold; padding-left: 5px;">Utilizador/Email</label>
+                <input type="text" name="username" placeholder="Digite..." required 
+                       style="width: 100%; padding: 7px 10px; border: 1px solid #ddd; border-radius: 20px; box-sizing: border-box; font-size: 10px; outline: none; background: #fafafa;">
             </div>
 
-            <div style="margin-bottom: 6px; position: relative;">
-                <label style="font-size: 10px; color: #666; display: block; margin-bottom: 5px; margin-left: 5px;">Senha <span style="color: red;">*</span></label>
-                <input type="password" name="password" placeholder="Digite sua senha" required 
-                       style="width: 100%; padding: 6px 12px; border: 1px solid #ddd; border-radius: 20px; box-sizing: border-box; font-size: 10px; outline: none;">
-                <i class="fa-regular fa-eye" style="position: absolute; right: 10px; bottom: 8px; font-size: 10px; color: #999; cursor: pointer;"></i>
+            <!-- Campo Senha Reduzido -->
+            <div style="margin-bottom: 8px; position: relative;">
+                <label style="font-size: 9px; color: #777; display: block; margin-bottom: 6px; font-weight: bold; padding-left: 5px;">Senha <span style="color: red;">*</span></label>
+                <input type="password" name="password" placeholder="Sua senha" required 
+                       style="width: 100%; padding: 7px 10px; border: 1px solid #ddd; border-radius: 20px; box-sizing: border-box; font-size: 10px; outline: none; background: #fafafa;">
+                <i class="fa-regular fa-eye" style="position: absolute; right: 10px; bottom: 8px; font-size: 10px; color: #aaa; cursor: pointer;"></i>
             </div>
 
-            <a href="#" style="display: block; text-align: center; color: #0081C9; text-decoration: none; font-size: 9px; margin-bottom: 15px; font-weight: 600;">Esqueceu a senha?</a>
+            <a href="#" style="display: block; text-align: center; color: #0081C9; text-decoration: none; font-size: 8px; margin-bottom: 25px; font-weight: bold;">Esqueceu?</a>
 
-            <button type="submit" style="width: 100%; padding: 6px; background: #fff; border: 1px solid #0081C9; color: #0081C9; border-radius: 20px; font-size: 11px; font-weight: 600; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 6px;">
-                <i class="fa-solid fa-right-to-bracket" style="font-size: 10px;"></i> Entrar
+            <!-- Botão Estreito -->
+            <button type="submit" style="width: 100%; padding: 8px; background: #fff; border: 1px solid #0081C9; color: #0081C9; border-radius: 20px; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 5px;">
+                <i class="fa-solid fa-right-to-bracket" style="font-size: 9px;"></i> Entrar
             </button>
         </form>
 
-        <span style="display: block; margin-top: 30px; color: #bbb; font-size: 8px; font-family: sans-serif;">v 2026.03.12-30431ca</span>
+        <span style="display: block; margin-top: 45px; color: #ddd; font-size: 8px; font-family: monospace;">v 2026.03.12</span>
     </div>
 
 </body>
 </html>
+
 
 
 

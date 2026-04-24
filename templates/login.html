@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -9,43 +10,38 @@
 
     <div style="width: 100%; max-width: 340px; padding: 40px 25px; border: 1px solid #e0e0e0; border-radius: 25px; text-align: center; box-sizing: border-box;">
         
-        <!-- LOGO EM SVG (VETORIZADA) - NÃO DEPENDE DE FICHEIROS -->
-        <div style="margin-bottom: 20px;">
-            <svg width="140" height="80" viewBox="0 0 200 100" xmlns="http://w3.org">
-                <rect width="200" height="100" fill="none"/>
-                <circle cx="100" cy="40" r="30" stroke="#0081C9" stroke-width="4" fill="white" />
-                <text x="100" y="85" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#0081C9">UJC - MOÇAMBIQUE</text>
-            </svg>
-        </div>
+        <!-- LOGO OFICIAL DIRETA DO SERVIDOR -->
+        <img src="https://ujc.ac.mz" alt="Logo UJC" style="width: 140px; margin-bottom: 20px;">
         
-        <p style="font-size: 1.1rem; font-weight: bold; margin: 0; color: #333;">Bem-vindo ao</p>
-        <h1 style="font-size: 26px; font-weight: 900; margin: 5px 0 30px 0; color: #000;">ESURA</h1>
+        <p style="font-size: 18px; font-weight: bold; margin: 0; color: #333;">Bem-vindo ao</p>
+        <h1 style="font-size: 26px; font-weight: 900; margin: 5px 0 35px 0; color: #000;">ESURA</h1>
 
         <form method="POST">
             {% csrf_token %}
             <div style="text-align: left; margin-bottom: 20px;">
-                <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px;">Utilizador/Email</label>
+                <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px; margin-left: 5px;">Utilizador/Email</label>
                 <input type="text" name="username" placeholder="Digite o Utilizador" required 
                        style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; font-size: 14px; outline: none;">
             </div>
 
             <div style="text-align: left; margin-bottom: 20px;">
-                <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px;">Senha *</label>
+                <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px; margin-left: 5px;">Senha *</label>
                 <input type="password" name="password" placeholder="Digite sua senha" required 
                        style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; font-size: 14px; outline: none;">
             </div>
 
-            <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 13px; margin-bottom: 25px;">Esqueceu a senha?</a>
+            <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 13px; margin: 15px 0 30px 10px;">Esqueceu a senha?</a>
 
-            <button type="submit" style="width: 100%; padding: 12px; background: #fff; border: 1.5px solid #0081C9; color: #0081C9; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer;">
-                → Entrar
+            <button type="submit" style="width: 100%; padding: 12px; background: #fff; border: 1.5px solid #0081C9; color: #0081C9; border-radius: 30px; font-size: 16px; cursor: pointer; display: flex; justify-content: center; align-items: center;">
+                <span style="margin-right: 10px; font-size: 22px; font-weight: bold;">→</span> Entrar
             </button>
         </form>
 
-        <span style="display: block; margin-top: 45px; color: #aaa; font-size: 11px;">v 2026.03.12-30431ca</span>
+        <span style="display: block; margin-top: 45px; color: #aaa; font-size: 12px; font-family: monospace;">v 2026.03.12-30431ca</span>
     </div>
 
 </body>
 </html>
+
 
 

@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt-mz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - ESURA</title>
 </head>
-<body style="margin: 0; background: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif;">
+<body style="margin: 0; background: #ffffff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif;">
 
-    <div style="width: 100%; max-width: 340px; padding: 40px 25px; border: 1px solid #e0e0e0; border-radius: 25px; text-align: center; box-sizing: border-box;">
+    <div style="width: 100%; max-width: 320px; padding: 40px 25px; border: 1px solid #e0e0e0; border-radius: 25px; text-align: center; box-sizing: border-box;">
         
-        <!-- LINK DIRETO DA LOGO OFICIAL (Substitua a linha da imagem por esta) -->
-        <img src="https://ujc.ac.mz" alt="Logo UJC" style="width: 150px; margin-bottom: 20px; display: inline-block;">
+        <!-- LOGOTIPO EXATO DA UJC EM CÓDIGO (SVG) -->
+        <div style="margin-bottom: 20px;">
+            <svg width="150" height="130" viewBox="0 0 400 350" xmlns="http://w3.org">
+                <!-- Letra U (Azul) -->
+                <path d="M70 50 L120 50 L120 180 Q120 250 200 250 Q280 250 280 180 L280 50 L330 50 L330 180 Q330 300 200 300 Q70 300 70 180 Z" fill="#0081C9"/>
+                <!-- Letra C (Preta) -->
+                <path d="M150 50 L330 50 L330 130 L220 130 Q180 130 180 170 Q180 210 220 210 L330 210 L330 290 L150 290 L150 50" fill="#000000" opacity="0.8"/>
+                <!-- Texto Inferior -->
+                <text x="200" y="335" font-size="28" font-weight="900" text-anchor="middle" fill="#555" font-family="Arial Black">UNIVERSIDADE</text>
+                <text x="200" y="370" font-size="32" font-weight="900" text-anchor="middle" fill="#0081C9" font-family="Arial Black">JOAQUIM CHISSANO</text>
+            </svg>
+        </div>
         
-        <p style="font-size: 1.1rem; font-weight: bold; margin: 0; color: #333;">Bem-vindo ao</p>
-        <h1 style="font-size: 26px; font-weight: 900; margin: 5px 0 35px 0; color: #000;">ESURA</h1>
+        <p style="font-size: 18px; font-weight: bold; margin: 0; color: #333;">Bem-vindo ao</p>
+        <h1 style="font-size: 28px; font-weight: 900; margin: 5px 0 35px 0; color: #000;">ESURA</h1>
 
         <form method="POST">
             {% csrf_token %}
-            <div style="text-align: left; margin-bottom: 20px;">
+            <div style="text-align: left; margin-bottom: 15px;">
                 <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px;">Utilizador/Email</label>
-                <input type="text" name="username" placeholder="Digite o Utilizador" required 
-                       style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; font-size: 14px; outline: none;">
+                <input type="text" name="username" placeholder="Digite o Utilizador" required style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; outline: none; font-size: 14px;">
             </div>
 
-            <div style="text-align: left; margin-bottom: 20px;">
+            <div style="text-align: left; margin-bottom: 15px;">
                 <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px;">Senha *</label>
-                <input type="password" name="password" placeholder="Digite sua senha" required 
-                       style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; font-size: 14px; outline: none;">
+                <input type="password" name="password" placeholder="Digite sua senha" required style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; outline: none; font-size: 14px;">
             </div>
 
-            <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 13px; margin-bottom: 25px;">Esqueceu a senha?</a>
+            <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 13px; margin: 15px 0 25px 5px;">Esqueceu a senha?</a>
 
             <button type="submit" style="width: 100%; padding: 12px; background: #fff; border: 1.5px solid #0081C9; color: #0081C9; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center;">
-                <span style="margin-right: 10px; font-size: 22px;">→</span> Entrar
+                <span style="margin-right: 10px; font-size: 20px;">➔</span> Entrar
             </button>
         </form>
 
-        <span style="display: block; margin-top: 40px; color: #aaa; font-size: 11px;">v 2026.03.12-30431ca</span>
+        <span style="display: block; margin-top: 40px; color: #aaa; font-size: 11px; font-family: monospace;">v 2026.03.12-30431ca</span>
     </div>
 
 </body>

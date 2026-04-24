@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -8,35 +9,28 @@
 <body style="margin: 0; background: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif;">
     <div style="width: 100%; max-width: 340px; padding: 40px 25px; border: 1px solid #e0e0e0; border-radius: 25px; text-align: center; box-sizing: border-box;">
         
-        <!-- LOGO VETORIAL UJC (NUNCA DÁ 404) -->
-        <div style="margin-bottom: 20px; display: flex; justify-content: center;">
-            <svg width="140" height="90" viewBox="0 0 100 100">
-                <circle cx="50" cy="40" r="35" fill="none" stroke="#0081C9" stroke-width="2"/>
-                <path d="M30 40 L50 20 L70 40 L50 60 Z" fill="#0081C9"/>
-                <text x="50" y="85" font-size="8" font-weight="bold" text-anchor="middle" fill="#0081C9">UNIVERSIDADE</text>
-                <text x="50" y="95" font-size="8" font-weight="bold" text-anchor="middle" fill="#0081C9">JOAQUIM CHISSANO</text>
-            </svg>
-        </div>
+        <!-- LOGOTIPO VERDADEIRO (Link Externo Seguro) -->
+        <img src="https://imgur.com" alt="Logo UJC" style="width: 140px; margin-bottom: 20px;">
         
         <p style="font-size: 18px; font-weight: bold; margin: 0; color: #333;">Bem-vindo ao</p>
-        <h1 style="font-size: 26px; font-weight: 900; margin: 5px 0 30px 0; color: #000;">ESURA</h1>
+        <h1 style="font-size: 26px; font-weight: 900; margin: 5px 0 35px 0; color: #000;">ESURA</h1>
 
         <form method="POST">
             {% csrf_token %}
-            <div style="text-align: left; margin-bottom: 15px;">
+            <div style="text-align: left; margin-bottom: 20px;">
                 <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px;">Utilizador/Email</label>
-                <input type="text" name="username" required style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; outline: none;">
+                <input type="text" name="username" placeholder="Digite o Utilizador" required style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; font-size: 14px; outline: none;">
             </div>
 
-            <div style="text-align: left; margin-bottom: 15px;">
+            <div style="text-align: left; margin-bottom: 20px;">
                 <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px;">Senha *</label>
-                <input type="password" name="password" required style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; outline: none;">
+                <input type="password" name="password" placeholder="Digite sua senha" required style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box; font-size: 14px; outline: none;">
             </div>
 
-            <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 13px; margin: 10px 0 25px 5px;">Esqueceu a senha?</a>
+            <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 13px; margin-bottom: 25px;">Esqueceu a senha?</a>
 
             <button type="submit" style="width: 100%; padding: 12px; background: #fff; border: 1.5px solid #0081C9; color: #0081C9; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center;">
-                <span style="margin-right: 10px; font-size: 20px;">→</span> Entrar
+                <span style="margin-right: 10px; font-size: 22px;">→</span> Entrar
             </button>
         </form>
 
@@ -44,6 +38,7 @@
     </div>
 </body>
 </html>
+
 
 
 

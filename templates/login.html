@@ -4,48 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Importação de ícones para o olho da senha -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
-<body style="margin: 0; background: #fdfdfd; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: -apple-system, sans-serif;">
+<body style="margin: 0; background: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: -apple-system, sans-serif;">
 
-    <!-- Contentor principal com borda suave conforme a imagem -->
-    <div style="width: 220px; padding: 30px 20px; border: 1px solid #e0e0e0; border-radius: 25px; background: #fff; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+    <!-- Card Comprimido: Largura reduzida para 190px para parecer "magro" -->
+    <div style="width: 190px; padding: 25px 15px; border: 1px solid #eee; border-radius: 20px; background: #fff; text-align: center;">
         
-        <!-- Logo UJC -->
-        <img src="{% static 'img/logo_ujc.png' %}" style="width: 100px; margin-bottom: 15px;">
+        <img src="{% static 'img/logo_ujc.png' %}" style="width: 85px; margin-bottom: 12px;">
         
-        <h2 style="font-size: 13px; font-weight: 700; margin: 0; color: #333;">Bem-vindo ao</h2>
-        <h1 style="font-size: 15px; font-weight: 800; margin: 2px 0 25px 0; color: #000;">ESURA</h1>
+        <h2 style="font-size: 11px; font-weight: 700; margin: 0; color: #444;">Bem-vindo ao</h2>
+        <h1 style="font-size: 14px; font-weight: 800; margin: 0 0 20px 0; color: #000;">ESURA</h1>
 
         <form method="POST" style="text-align: left;">
             {% csrf_token %}
             
-            <!-- Campo Utilizador -->
-            <div style="margin-bottom: 15px;">
-                <label style="font-size: 11px; color: #555; display: block; margin-bottom: 8px; margin-left: 5px;">Utilizador/Email</label>
+            <div style="margin-bottom: 12px;">
+                <label style="font-size: 10px; color: #666; display: block; margin-bottom: 5px; margin-left: 5px;">Utilizador/Email</label>
                 <input type="text" name="username" placeholder="Digite o Utilizador" required 
-                       style="width: 100%; padding: 8px 15px; border: 1px solid #ccc; border-radius: 20px; box-sizing: border-box; font-size: 11px; color: #888; outline: none;">
+                       style="width: 100%; padding: 6px 12px; border: 1px solid #ddd; border-radius: 20px; box-sizing: border-box; font-size: 10px; outline: none;">
             </div>
 
-            <!-- Campo Senha com Ícone de Olho -->
-            <div style="margin-bottom: 8px; position: relative;">
-                <label style="font-size: 11px; color: #555; display: block; margin-bottom: 8px; margin-left: 5px;">Senha <span style="color: red;">*</span></label>
+            <div style="margin-bottom: 6px; position: relative;">
+                <label style="font-size: 10px; color: #666; display: block; margin-bottom: 5px; margin-left: 5px;">Senha <span style="color: red;">*</span></label>
                 <input type="password" name="password" placeholder="Digite sua senha" required 
-                       style="width: 100%; padding: 8px 15px; border: 1px solid #ccc; border-radius: 20px; box-sizing: border-box; font-size: 11px; color: #888; outline: none;">
-                <i class="fa-regular fa-eye" style="position: absolute; right: 12px; bottom: 10px; font-size: 12px; color: #666; cursor: pointer;"></i>
+                       style="width: 100%; padding: 6px 12px; border: 1px solid #ddd; border-radius: 20px; box-sizing: border-box; font-size: 10px; outline: none;">
+                <i class="fa-regular fa-eye" style="position: absolute; right: 10px; bottom: 8px; font-size: 10px; color: #999; cursor: pointer;"></i>
             </div>
 
-            <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 10px; margin-bottom: 20px; margin-left: 5px;">Esqueceu a senha?</a>
+            <a href="#" style="display: block; text-align: center; color: #0081C9; text-decoration: none; font-size: 9px; margin-bottom: 15px; font-weight: 600;">Esqueceu a senha?</a>
 
-            <!-- Botão com Ícone conforme a imagem -->
-            <button type="submit" style="width: 100%; padding: 7px; background: #fff; border: 1px solid #0081C9; color: #0081C9; border-radius: 20px; font-size: 12px; font-weight: 500; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-right-to-bracket"></i> Entrar
+            <button type="submit" style="width: 100%; padding: 6px; background: #fff; border: 1px solid #0081C9; color: #0081C9; border-radius: 20px; font-size: 11px; font-weight: 600; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 6px;">
+                <i class="fa-solid fa-right-to-bracket" style="font-size: 10px;"></i> Entrar
             </button>
         </form>
 
-        <!-- Versão no rodapé -->
-        <span style="display: block; margin-top: 35px; color: #999; font-size: 9px; font-family: sans-serif;">v 2026.03.12-30431ca</span>
+        <span style="display: block; margin-top: 30px; color: #bbb; font-size: 8px; font-family: sans-serif;">v 2026.03.12-30431ca</span>
     </div>
 
 </body>

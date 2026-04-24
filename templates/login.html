@@ -4,50 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Login - ESURA</title>
 </head>
-<body style="margin: 0; background: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: -apple-system, system-ui, sans-serif;">
-
-    <!-- Card Compacto -->
-    <div style="width: 290px; padding: 20px 15px; border: 1px solid #e5e5e5; border-radius: 18px; text-align: center; box-sizing: border-box;">
-        
-        <!-- Logo reduzida -->
-        <img src="https://ujc.ac.mz" alt="Logo UJC" style="width: 100px; margin-bottom: 10px;">
-        
-        <p style="font-size: 13px; font-weight: 600; margin: 0; color: #444;">Bem-vindo ao</p>
-        <h1 style="font-size: 22px; font-weight: 900; margin: 2px 0 20px 0; color: #000; letter-spacing: -0.5px;">ESURA</h1>
-
+<body style="margin:0; background:#fff; display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif;">
+    <div style="width:260px; padding:15px; border:1px solid #eee; border-radius:15px; text-align:center; box-sizing:border-box;">
+        <img src="{% static 'img/logo_ujc.png' %}" style="width:80px; margin-bottom:10px;">
+        <p style="font-size:11px; font-weight:600; margin:0; color:#555;">Bem-vindo ao</p>
+        <h1 style="font-size:18px; font-weight:900; margin:0 0 15px 0; color:#000;">ESURA</h1>
         <form method="POST">
             {% csrf_token %}
-            <!-- Campo Utilizador reduzido -->
-            <div style="text-align: left; margin-bottom: 12px;">
-                <label style="display: block; font-size: 11px; color: #777; margin-bottom: 4px; margin-left: 8px; font-weight: bold;">Utilizador/Email</label>
-                <input type="text" name="username" placeholder="Digite o Utilizador" required 
-                       style="width: 100%; padding: 8px 15px; border: 1px solid #ccc; border-radius: 20px; box-sizing: border-box; font-size: 13px; outline: none;">
+            <div style="text-align:left; margin-bottom:10px;">
+                <label style="display:block; font-size:10px; color:#888; margin-bottom:3px; margin-left:5px;">Utilizador/Email</label>
+                <input type="text" name="username" required style="width:100%; padding:6px 12px; border:1px solid #ccc; border-radius:20px; box-sizing:border-box; font-size:12px; outline:none;">
             </div>
-
-            <!-- Campo Senha reduzido -->
-            <div style="text-align: left; margin-bottom: 10px;">
-                <label style="display: block; font-size: 11px; color: #777; margin-bottom: 4px; margin-left: 8px; font-weight: bold;">Senha *</label>
-                <input type="password" name="password" placeholder="Digite sua senha" required 
-                       style="width: 100%; padding: 8px 15px; border: 1px solid #ccc; border-radius: 20px; box-sizing: border-box; font-size: 13px; outline: none;">
+            <div style="text-align:left; margin-bottom:8px;">
+                <label style="display:block; font-size:10px; color:#888; margin-bottom:3px; margin-left:5px;">Senha *</label>
+                <input type="password" name="password" required style="width:100%; padding:6px 12px; border:1px solid #ccc; border-radius:20px; box-sizing:border-box; font-size:12px; outline:none;">
             </div>
-
-            <!-- Link compacto -->
-            <div style="text-align: left; margin-bottom: 15px;">
-                <a href="#" style="color: #0081C9; text-decoration: none; font-size: 11px; font-weight: bold; margin-left: 8px;">Esqueceu a senha?</a>
-            </div>
-
-            <!-- Botão Entrar comprimido -->
-            <button type="submit" style="width: 100%; padding: 9px; background: #fff; border: 1.2px solid #0081C9; color: #0081C9; border-radius: 20px; font-size: 14px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center;">
-                <span style="margin-right: 6px; font-size: 16px;">➔</span> Entrar
-            </button>
+            <a href="#" style="display:block; text-align:left; color:#0081C9; text-decoration:none; font-size:10px; margin-bottom:15px; margin-left:5px;">Esqueceu a senha?</a>
+            <button type="submit" style="width:100%; padding:8px; background:#fff; border:1px solid #0081C9; color:#0081C9; border-radius:20px; font-size:13px; font-weight:bold; cursor:pointer;">➔ Entrar</button>
         </form>
-
-        <!-- Versão reduzida -->
-        <span style="display: block; margin-top: 25px; color: #bbb; font-size: 9px; font-family: monospace;">v 2026.03.12-30431ca</span>
+        <span style="display:block; margin-top:20px; color:#ccc; font-size:8px;">v 2026.03.12-30431ca</span>
     </div>
-
 </body>
 </html>
 

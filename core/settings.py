@@ -23,7 +23,6 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -44,14 +43,14 @@ TEMPLATES = [{
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-# Configuração de Estáticos
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# Armazenamento WhiteNoise para Produção
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# Mudança aqui: Usar o storage padrão para evitar erros de cache na imagem
+STATICFILES_STORAGE = 'whitenoise.storage.StaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 

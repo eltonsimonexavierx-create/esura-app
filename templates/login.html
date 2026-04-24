@@ -7,45 +7,46 @@
 </head>
 <body style="margin: 0; background: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: -apple-system, sans-serif;">
 
-    <!-- Card Super Fino: Reduzido de 240px para 200px -->
-    <div style="width: 200px; text-align: center; box-sizing: border-box;">
+    <!-- Card "Magro" e Nítido: Reduzido para 180px -->
+    <div style="width: 180px; text-align: center; box-sizing: border-box;">
         
-        <!-- Logo minimalista -->
-        <img src="{% static 'img/logo_ujc.png' %}" style="width: 60px; margin-bottom: 8px;">
+        <!-- Logo: Dimensão nítida mas proporcional -->
+        <img src="{% static 'img/logo_ujc.png' %}" style="width: 55px; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto;">
         
-        <p style="font-size: 9px; font-weight: 600; margin: 0; color: #666; text-transform: uppercase; letter-spacing: 1px;">Bem-vindo ao</p>
-        <h1 style="font-size: 18px; font-weight: 900; margin: 0 0 20px 0; color: #000;">ESURA</h1>
+        <p style="font-size: 8px; font-weight: 700; margin: 0; color: #777; text-transform: uppercase; letter-spacing: 0.8px;">Bem-vindo ao</p>
+        <h1 style="font-size: 18px; font-weight: 900; margin: 2px 0 20px 0; color: #000; letter-spacing: -0.5px;">ESURA</h1>
 
         <form method="POST">
             {% csrf_token %}
             
-            <!-- Input Super Fino -->
-            <div style="text-align: left; margin-bottom: 8px;">
-                <label style="display: block; font-size: 8px; color: #999; margin-bottom: 2px; margin-left: 10px; font-weight: bold;">UTILIZADOR</label>
+            <!-- Campo Utilizador -->
+            <div style="text-align: left; margin-bottom: 10px;">
+                <label style="display: block; font-size: 8px; color: #444; margin-bottom: 3px; margin-left: 8px; font-weight: 800;">UTILIZADOR</label>
                 <input type="text" name="username" required 
-                       style="width: 100%; padding: 5px 12px; border: 1px solid #eef0f2; border-radius: 20px; box-sizing: border-box; font-size: 11px; outline: none; background: #fafafa;">
+                       style="width: 100%; padding: 6px 12px; border: 1.5px solid #eee; border-radius: 15px; box-sizing: border-box; font-size: 11px; outline: none; background: #fff; color: #000;">
             </div>
 
-            <!-- Input Super Fino -->
-            <div style="text-align: left; margin-bottom: 5px;">
-                <label style="display: block; font-size: 8px; color: #999; margin-bottom: 2px; margin-left: 10px; font-weight: bold;">SENHA</label>
+            <!-- Campo Senha -->
+            <div style="text-align: left; margin-bottom: 6px;">
+                <label style="display: block; font-size: 8px; color: #444; margin-bottom: 3px; margin-left: 8px; font-weight: 800;">SENHA</label>
                 <input type="password" name="password" required 
-                       style="width: 100%; padding: 5px 12px; border: 1px solid #eef0f2; border-radius: 20px; box-sizing: border-box; font-size: 11px; outline: none; background: #fafafa;">
+                       style="width: 100%; padding: 6px 12px; border: 1.5px solid #eee; border-radius: 15px; box-sizing: border-box; font-size: 11px; outline: none; background: #fff; color: #000;">
             </div>
 
-            <a href="#" style="display: block; text-align: right; color: #0081C9; text-decoration: none; font-size: 8px; margin-bottom: 15px; font-weight: bold;">Esqueceu?</a>
+            <a href="#" style="display: block; text-align: right; color: #0081C9; text-decoration: none; font-size: 8px; margin-bottom: 18px; font-weight: 800;">Esqueceu?</a>
 
-            <!-- Botão Super Fino -->
-            <button type="submit" style="width: 100%; padding: 6px; background: #fff; border: 1px solid #0081C9; color: #0081C9; border-radius: 20px; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center;">
-                <span style="margin-right: 5px;">➔</span> Entrar
+            <!-- Botão: Bordas nítidas e contraste alto -->
+            <button type="submit" style="width: 100%; padding: 8px; background: #0081C9; border: none; color: #fff; border-radius: 15px; font-size: 11px; font-weight: 700; cursor: pointer; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 4px rgba(0,129,201,0.2);">
+                Entrar <span style="margin-left: 5px;">➔</span>
             </button>
         </form>
 
-        <span style="display: block; margin-top: 25px; color: #eee; font-size: 7px; font-family: monospace;">v 2026.03.12</span>
+        <span style="display: block; margin-top: 30px; color: #ccc; font-size: 7px; font-family: monospace; letter-spacing: 0.5px;">v 2026.03.12</span>
     </div>
 
 </body>
 </html>
+
 
 
 

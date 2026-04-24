@@ -5,34 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - ESURA</title>
-    <!-- Chamada direta do CSS -->
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
-    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; background: #fff;">
-        <div style="width: 320px; padding: 40px 30px; border: 1px solid #ddd; border-radius: 25px; text-align: center;">
-            <img src="/static/img/logo_ujc.png" style="width: 140px; margin-bottom: 20px;">
-            <p style="font-weight: bold; margin: 0; color: #333;">Bem-vindo ao</p>
-            <h1 style="font-size: 26px; font-weight: 900; margin: 5px 0 30px 0;">ESURA</h1>
+<body style="margin: 0; padding: 0; background: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif;">
 
-            <form method="POST">
-                {% csrf_token %}
-                <div style="text-align: left; margin-bottom: 15px;">
-                    <label style="display: block; font-size: 13px; color: #666; margin-bottom: 5px;">Utilizador/Email</label>
-                    <input type="text" name="username" style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box;">
+    <div style="width: 100%; max-width: 340px; padding: 40px 25px; border: 1px solid #e8e8e8; border-radius: 25px; text-align: center; box-sizing: border-box;">
+        
+        <!-- Logo -->
+        <img src="{% static 'img/logo_ujc.png' %}" alt="Logo UJC" style="width: 140px; margin-bottom: 20px;">
+        
+        <p style="font-size: 1.1rem; font-weight: 600; margin: 0; color: #333;">Bem-vindo ao</p>
+        <h1 style="font-size: 1.6rem; font-weight: 900; margin: 5px 0 30px 0; color: #000; letter-spacing: 1px;">ESURA</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div style="text-align: left; margin-bottom: 20px;">
+                <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px; margin-left: 5px;">Utilizador/Email</label>
+                <input type="text" name="username" placeholder="Digite o Utilizador" required 
+                       style="width: 100%; padding: 12px 20px; border: 1px solid #d1d1d1; border-radius: 30px; box-sizing: border-box; font-size: 14px; outline: none;">
+            </div>
+
+            <div style="text-align: left; margin-bottom: 20px;">
+                <label style="display: block; font-size: 14px; color: #666; margin-bottom: 8px; margin-left: 5px;">Senha *</label>
+                <div style="position: relative;">
+                    <input type="password" name="password" placeholder="Digite sua senha" required 
+                           style="width: 100%; padding: 12px 20px; border: 1px solid #d1d1d1; border-radius: 30px; box-sizing: border-box; font-size: 14px; outline: none;">
+                    <span style="position: absolute; right: 18px; top: 50%; transform: translateY(-50%); cursor: pointer;">👁</span>
                 </div>
+            </div>
 
-                <div style="text-align: left; margin-bottom: 15px;">
-                    <label style="display: block; font-size: 13px; color: #666; margin-bottom: 5px;">Senha *</label>
-                    <input type="password" name="password" style="width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 30px; box-sizing: border-box;">
-                </div>
+            <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 13px; margin: 15px 0 30px 10px;">Esqueceu a senha?</a>
 
-                <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 13px; margin-bottom: 20px;">Esqueceu a senha?</a>
+            <button type="submit" style="width: 100%; padding: 12px; background: #ffffff; border: 1.5px solid #0081C9; color: #0081C9; border-radius: 30px; font-size: 16px; font-weight: 500; cursor: pointer; display: flex; justify-content: center; align-items: center;">
+                <span style="margin-right: 10px; font-size: 20px; font-weight: bold;">→</span> Entrar
+            </button>
+        </form>
 
-                <button type="submit" style="width: 100%; padding: 12px; background: #fff; border: 1.5px solid #0081C9; color: #0081C9; border-radius: 30px; font-size: 16px; cursor: pointer;">→ Entrar</button>
-            </form>
-            <p style="margin-top: 40px; color: #aaa; font-size: 11px;">v 2026.03.12-30431ca</p>
-        </div>
+        <span style="display: block; margin-top: 45px; color: #aaa; font-size: 12px; font-family: monospace;">v 2026.03.12-30431ca</span>
     </div>
+
 </body>
 </html>

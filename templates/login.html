@@ -5,26 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
-<body style="margin:0; background:#fff; display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif;">
-    <div style="width:260px; padding:15px; border:1px solid #eee; border-radius:15px; text-align:center; box-sizing:border-box;">
-        <img src="{% static 'img/logo_ujc.png' %}" style="width:80px; margin-bottom:10px;">
-        <p style="font-size:11px; font-weight:600; margin:0; color:#555;">Bem-vindo ao</p>
-        <h1 style="font-size:18px; font-weight:900; margin:0 0 15px 0; color:#000;">ESURA</h1>
+<body style="margin: 0; background: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: -apple-system, sans-serif;">
+
+    <!-- Card Ultra Fino: Reduzido para 240px -->
+    <div style="width: 240px; text-align: center; box-sizing: border-box;">
+        
+        <!-- Logo minimalista -->
+        <img src="{% static 'img/logo_ujc.png' %}" style="width: 70px; margin-bottom: 8px;">
+        
+        <p style="font-size: 10px; font-weight: 600; margin: 0; color: #666; text-transform: uppercase; letter-spacing: 1px;">Bem-vindo ao</p>
+        <h1 style="font-size: 20px; font-weight: 900; margin: 0 0 20px 0; color: #000;">ESURA</h1>
+
         <form method="POST">
             {% csrf_token %}
-            <div style="text-align:left; margin-bottom:10px;">
-                <label style="display:block; font-size:10px; color:#888; margin-bottom:3px; margin-left:5px;">Utilizador/Email</label>
-                <input type="text" name="username" required style="width:100%; padding:6px 12px; border:1px solid #ccc; border-radius:20px; box-sizing:border-box; font-size:12px; outline:none;">
+            
+            <!-- Input Fino -->
+            <div style="text-align: left; margin-bottom: 8px;">
+                <label style="display: block; font-size: 9px; color: #999; margin-bottom: 2px; margin-left: 12px; font-weight: bold;">UTILIZADOR</label>
+                <input type="text" name="username" required 
+                       style="width: 100%; padding: 6px 15px; border: 1px solid #e0e0e0; border-radius: 20px; box-sizing: border-box; font-size: 12px; outline: none; background: #fafafa;">
             </div>
-            <div style="text-align:left; margin-bottom:8px;">
-                <label style="display:block; font-size:10px; color:#888; margin-bottom:3px; margin-left:5px;">Senha *</label>
-                <input type="password" name="password" required style="width:100%; padding:6px 12px; border:1px solid #ccc; border-radius:20px; box-sizing:border-box; font-size:12px; outline:none;">
+
+            <!-- Input Fino -->
+            <div style="text-align: left; margin-bottom: 5px;">
+                <label style="display: block; font-size: 9px; color: #999; margin-bottom: 2px; margin-left: 12px; font-weight: bold;">SENHA</label>
+                <input type="password" name="password" required 
+                       style="width: 100%; padding: 6px 15px; border: 1px solid #e0e0e0; border-radius: 20px; box-sizing: border-box; font-size: 12px; outline: none; background: #fafafa;">
             </div>
-            <a href="#" style="display:block; text-align:left; color:#0081C9; text-decoration:none; font-size:10px; margin-bottom:15px; margin-left:5px;">Esqueceu a senha?</a>
-            <button type="submit" style="width:100%; padding:8px; background:#fff; border:1px solid #0081C9; color:#0081C9; border-radius:20px; font-size:13px; font-weight:bold; cursor:pointer;">➔ Entrar</button>
+
+            <a href="#" style="display: block; text-align: right; color: #0081C9; text-decoration: none; font-size: 9px; margin-bottom: 15px; font-weight: bold;">Esqueceu a senha?</a>
+
+            <!-- Botão Fino -->
+            <button type="submit" style="width: 100%; padding: 7px; background: #fff; border: 1px solid #0081C9; color: #0081C9; border-radius: 20px; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center;">
+                <span style="margin-right: 5px;">➔</span> Entrar
+            </button>
         </form>
-        <span style="display:block; margin-top:20px; color:#ccc; font-size:8px;">v 2026.03.12-30431ca</span>
+
+        <span style="display: block; margin-top: 25px; color: #ddd; font-size: 8px; font-family: monospace;">v 2026.03.12-30431ca</span>
     </div>
+
 </body>
 </html>
 

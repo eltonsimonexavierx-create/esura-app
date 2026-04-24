@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ESURA</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Logo da UJC -->
+            <img src="{% static 'img/logo_ujc.png' %}" alt="Logo UJC" class="logo">
+            
+            <p class="welcome-text">Bem-vindo ao</p>
+            <h1 class="system-name">ESURA</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="input-group">
+                    <label>Utilizador/Email</label>
+                    <input type="text" name="username" placeholder="Digite o Utilizador" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Senha *</label>
+                    <div class="password-wrapper">
+                        <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+                        <span class="toggle-password">👁</span>
+                    </div>
+                </div>
+
+                <a href="#" class="forgot-link">Esqueceu a senha?</a>
+
+                <button type="submit" class="btn-login">
+                    <span class="arrow">→</span> Entrar
+                </button>
+            </form>
+
+            <p class="version">v 2026.03.12-30431ca</p>
+        </div>
+    </div>
+</body>
+</html>

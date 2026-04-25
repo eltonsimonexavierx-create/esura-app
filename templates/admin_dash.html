@@ -9,16 +9,19 @@
 </head>
 <body style="margin: 0; background: #f4f7f6; font-family: -apple-system, sans-serif;">
 
-    <!-- Sidebar (Menu Lateral) -->
+    <!-- Sidebar -->
     <div style="width: 200px; height: 100vh; background: #07041b; position: fixed; color: #fff; padding: 20px 10px; box-sizing: border-box;">
         <img src="{% static 'img/logo_ujc.png' %}" style="width: 80px; filter: brightness(0) invert(1); margin-bottom: 30px; display: block; margin-left: auto; margin-right: auto;">
         
         <p style="font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Gestão</p>
         
         <div style="display: flex; flex-direction: column; gap: 15px;">
-            <a href="#" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-users" style="margin-right: 10px;"></i> Estudantes</a>
-            <a href="#" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-chalkboard-teacher" style="margin-right: 10px;"></i> Professores</a>
-            <a href="#" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-book" style="margin-right: 10px;"></i> Disciplinas</a>
+            <!-- LINKS CORRIGIDOS -->
+            <a href="/admin/auth/user/" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-users" style="margin-right: 10px;"></i> Estudantes/Docentes</a>
+            <a href="/admin/core/turma/" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-chalkboard-teacher" style="margin-right: 10px;"></i> Turmas</a>
+            <a href="/admin/core/disciplina/" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-book" style="margin-right: 10px;"></i> Disciplinas</a>
+            <a href="/admin/core/nota/" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-file-invoice" style="margin-right: 10px;"></i> Notas</a>
+            
             <a href="{% url 'logout' %}" style="color: #ff4d4d; text-decoration: none; font-size: 13px; margin-top: 50px;"><i class="fas fa-sign-out-alt" style="margin-right: 10px;"></i> Sair</a>
         </div>
     </div>
@@ -26,20 +29,17 @@
     <!-- Conteúdo Principal -->
     <div style="margin-left: 200px; padding: 40px;">
         <h1 style="font-size: 24px; color: #07041b; font-weight: 900;">Painel do Administrador</h1>
-        <p style="color: #666; font-size: 14px;">Bem-vindo, <strong>{{ user.username }}</strong>. O que pretendes gerir hoje?</p>
+        <p style="color: #666; font-size: 14px;">Bem-vindo, <strong>{{ user.username }}</strong>.</p>
 
-        <!-- Cards de Resumo -->
         <div style="display: flex; gap: 20px; margin-top: 30px;">
-            <div style="flex: 1; background: #fff; padding: 20px; border-radius: 15px; border: 1px solid #eee; text-align: center;">
-                <h3 style="margin: 0; font-size: 12px; color: #999;">Total Estudantes</h3>
-                <p style="font-size: 24px; font-weight: 900; margin: 10px 0; color: #0081C9;">1,240</p>
-            </div>
-            <div style="flex: 1; background: #fff; padding: 20px; border-radius: 15px; border: 1px solid #eee; text-align: center;">
-                <h3 style="margin: 0; font-size: 12px; color: #999;">Professores Ativos</h3>
-                <p style="font-size: 24px; font-weight: 900; margin: 10px 0; color: #0081C9;">85</p>
-            </div>
+            <!-- Link direto para adicionar rápido -->
+            <a href="/admin/core/disciplina/add/" style="flex: 1; background: #0081C9; color: #fff; padding: 20px; border-radius: 15px; text-decoration: none; text-align: center; font-weight: bold;">
+                + Criar Disciplina
+            </a>
+            <a href="/admin/auth/user/add/" style="flex: 1; background: #07041b; color: #fff; padding: 20px; border-radius: 15px; text-decoration: none; text-align: center; font-weight: bold;">
+                + Registrar Utilizador
+            </a>
         </div>
     </div>
-
 </body>
 </html>

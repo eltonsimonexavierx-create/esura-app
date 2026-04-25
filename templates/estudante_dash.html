@@ -9,32 +9,41 @@
 </head>
 <body style="margin: 0; background: #fdfdfd; font-family: -apple-system, sans-serif;">
 
-    <!-- Barra de Topo -->
-    <div style="width: 100%; padding: 15px 20px; background: #fff; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
-        <img src="{% static 'img/logo_ujc.png' %}" style="width: 60px;">
-        <div style="text-align: right;">
-            <p style="font-size: 11px; margin: 0; font-weight: bold; color: #333;">{{ user.username }}</p>
-            <a href="{% url 'login' %}" style="font-size: 10px; color: #0081C9; text-decoration: none;">Sair</a>
+    <!-- Topo -->
+    <div style="width: 100%; padding: 15px 25px; background: #fff; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+        <img src="{% static 'img/logo_ujc.png' %}" style="width: 50px;">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="text-align: right;">
+                <p style="font-size: 11px; margin: 0; font-weight: 800; color: #07041b;">{{ user.username }}</p>
+                <p style="font-size: 9px; margin: 0; color: #999;">Estudante</p>
+            </div>
+            <a href="{% url 'logout' %}" style="color: #ff4d4d; font-size: 14px;"><i class="fas fa-sign-out-alt"></i></a>
         </div>
     </div>
 
-    <!-- Conteúdo Principal -->
-    <div style="max-width: 400px; margin: 20px auto; padding: 0 15px;">
-        <h2 style="font-size: 18px; color: #000; font-weight: 900;">Painel do Estudante</h2>
-        <p style="font-size: 12px; color: #666; margin-bottom: 25px;">Bem-vindo ao ESURA. Aqui estão as tuas informações.</p>
+    <!-- Conteúdo -->
+    <div style="max-width: 600px; margin: 30px auto; padding: 0 20px;">
+        <h1 style="font-size: 20px; font-weight: 900; color: #07041b; margin-bottom: 5px;">O meu Percurso</h1>
+        <p style="font-size: 12px; color: #666; margin-bottom: 30px;">Consulta as tuas cadeiras e desempenho académico.</p>
 
-        <!-- Cards de Ação Rápida -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-            <div style="padding: 15px; background: #fff; border: 1px solid #eee; border-radius: 15px; text-align: center;">
-                <i class="fa-solid fa-book" style="color: #0081C9; margin-bottom: 8px;"></i>
-                <p style="font-size: 10px; margin: 0; font-weight: bold;">Disciplinas</p>
+        <!-- Grade de Opções -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div style="background: #fff; padding: 25px; border-radius: 20px; border: 1px solid #eee; text-align: center; cursor: pointer;">
+                <i class="fas fa-book-open" style="font-size: 24px; color: #0081C9; margin-bottom: 10px;"></i>
+                <p style="font-size: 12px; font-weight: bold; margin: 0;">Minhas Disciplinas</p>
             </div>
-            <div style="padding: 15px; background: #fff; border: 1px solid #eee; border-radius: 15px; text-align: center;">
-                <i class="fa-solid fa-graduation-cap" style="color: #0081C9; margin-bottom: 8px;"></i>
-                <p style="font-size: 10px; margin: 0; font-weight: bold;">Notas</p>
+            <div style="background: #fff; padding: 25px; border-radius: 20px; border: 1px solid #eee; text-align: center; cursor: pointer;">
+                <i class="fas fa-file-invoice" style="font-size: 24px; color: #0081C9; margin-bottom: 10px;"></i>
+                <p style="font-size: 12px; font-weight: bold; margin: 0;">Ver Notas</p>
             </div>
+        </div>
+
+        <!-- Alerta de Mensagem (Exemplo) -->
+        <div style="margin-top: 25px; padding: 15px; background: #e8f4fd; border-radius: 15px; border-left: 5px solid #0081C9;">
+            <p style="font-size: 11px; color: #0081C9; margin: 0;"><strong>Aviso:</strong> As inscrições para os exames de recorrência estão abertas até dia 30.</p>
         </div>
     </div>
 
 </body>
 </html>
+

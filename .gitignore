@@ -1,0 +1,14 @@
+# Pastas de ambiente virtual
+venv/
+env/
+.env
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+
+# Ficheiros do SO
+.DS_Store
+Thumbs.db
+
+# IMPORTANTE: Não coloques o db.sqlite3 aqui para ele poder subir com os teus usuários

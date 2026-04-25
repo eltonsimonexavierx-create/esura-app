@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from . import views  # Importa as tuas views da pasta core
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -10,5 +10,8 @@ urlpatterns = [
     path('admin-esura/', views.admin_view, name='admin_dash'),
     path('logout/', views.logout_view, name='logout'),
 ]
+
+
+
 
 

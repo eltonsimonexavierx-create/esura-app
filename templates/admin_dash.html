@@ -9,22 +9,32 @@
 </head>
 <body style="margin: 0; background: #f4f7f6; font-family: -apple-system, sans-serif;">
 
-    <!-- Sidebar -->
-    <div style="width: 200px; height: 100vh; background: #07041b; position: fixed; color: #fff; padding: 20px 10px; box-sizing: border-box;">
-        <img src="{% static 'img/logo_ujc.png' %}" style="width: 80px; filter: brightness(0) invert(1); margin-bottom: 30px; display: block; margin-left: auto; margin-right: auto;">
+   <!-- Sidebar (Menu Lateral) agora em Branco -->
+<div style="width: 200px; height: 100vh; background: #ffffff; position: fixed; color: #333; padding: 20px 10px; box-sizing: border-box; border-right: 1px solid #eee;">
+    <!-- Logo (Removi o filtro invert que era para fundo escuro) -->
+    <img src="{% static 'img/logo_ujc.png' %}" style="width: 80px; margin-bottom: 30px; display: block; margin-left: auto; margin-right: auto;">
+    
+    <p style="font-size: 10px; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; padding-left: 10px;">Gestão</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+        <!-- Links com texto escuro para fundo branco -->
+        <a href="/admin/auth/user/" style="color: #444; text-decoration: none; font-size: 13px; padding: 10px; border-radius: 10px; display: flex; align-items: center; transition: 0.3s;">
+            <i class="fas fa-users" style="margin-right: 10px; width: 20px; color: #0081C9;"></i> Estudantes/Docentes
+        </a>
+        <a href="/admin/core/turma/" style="color: #444; text-decoration: none; font-size: 13px; padding: 10px; border-radius: 10px; display: flex; align-items: center;">
+            <i class="fas fa-chalkboard-teacher" style="margin-right: 10px; width: 20px; color: #0081C9;"></i> Turmas
+        </a>
+        <a href="/admin/core/disciplina/" style="color: #444; text-decoration: none; font-size: 13px; padding: 10px; border-radius: 10px; display: flex; align-items: center;">
+            <i class="fas fa-book" style="margin-right: 10px; width: 20px; color: #0081C9;"></i> Disciplinas
+        </a>
+        <a href="/admin/core/nota/" style="color: #444; text-decoration: none; font-size: 13px; padding: 10px; border-radius: 10px; display: flex; align-items: center;">
+            <i class="fas fa-file-invoice" style="margin-right: 10px; width: 20px; color: #0081C9;"></i> Notas
+        </a>
         
-        <p style="font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Gestão</p>
-        
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <!-- LINKS CORRIGIDOS -->
-            <a href="/admin/auth/user/" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-users" style="margin-right: 10px;"></i> Estudantes/Docentes</a>
-            <a href="/admin/core/turma/" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-chalkboard-teacher" style="margin-right: 10px;"></i> Turmas</a>
-            <a href="/admin/core/disciplina/" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-book" style="margin-right: 10px;"></i> Disciplinas</a>
-            <a href="/admin/core/nota/" style="color: #fff; text-decoration: none; font-size: 13px;"><i class="fas fa-file-invoice" style="margin-right: 10px;"></i> Notas</a>
-            
-            <a href="{% url 'logout' %}" style="color: #ff4d4d; text-decoration: none; font-size: 13px; margin-top: 50px;"><i class="fas fa-sign-out-alt" style="margin-right: 10px;"></i> Sair</a>
-        </div>
+        <a href="{% url 'logout' %}" style="color: #ff4d4d; text-decoration: none; font-size: 13px; margin-top: 50px; padding: 10px;"><i class="fas fa-sign-out-alt" style="margin-right: 10px;"></i> Sair</a>
     </div>
+</div>
+
 
     <!-- Conteúdo Principal -->
     <div style="margin-left: 200px; padding: 40px;">

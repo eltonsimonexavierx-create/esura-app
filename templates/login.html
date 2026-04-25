@@ -2,22 +2,54 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
-...
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body style="margin: 0; background: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: -apple-system, sans-serif;">
 
-<!-- Card Ultra Magro (120px) com topo reduzido -->
-<div style="width: 120px; padding: 10px 5px 40px 5px; border: 1px solid #f2f2f2; border-radius: 25px; background: #fff; box-sizing: border-box;">
-    
-    <!-- Logo: Margem superior mínima para "tocar" no topo -->
-    <div style="width: 100%; display: flex; justify-content: center; margin-top: 2px; margin-bottom: 15px;">
-        <img src="{% static 'img/logo_ujc.png' %}" style="width: 110px; height: auto; display: block;">
+    <!-- Card Ultra Magro (150px) -->
+    <div style="width: 150px; padding: 40px 10px; border: 1px solid #f2f2f2; border-radius: 25px; background: #fff; box-sizing: border-box;">
+        
+        <!-- LOGOTIPO: display block + margin auto garante o centro absoluto -->
+        <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 20px;">
+            <img src="{% static 'img/logo_ujc.png' %}" style="width: 130px; height: auto; display: block;">
+        </div>
+        
+        <!-- Cabeçalho Alinhado à Esquerda (conforme solicitado) -->
+        <div style="text-align: left; padding-left: 5px;">
+            <h2 style="font-size: 11px; font-weight: 700; margin: 0; color: #555;">Bem-vindo ao</h2>
+            <h1 style="font-size: 16px; font-weight: 900; margin: 2px 0 25px 0; color: #000;">ESURA</h1>
+        </div>
+
+        <form method="POST" style="text-align: left;">
+            {% csrf_token %}
+            
+            <div style="margin-bottom: 15px;">
+                <label style="font-size: 9px; color: #777; display: block; margin-bottom: 5px; font-weight: bold; padding-left: 5px;">Utilizador/Email</label>
+                <input type="text" name="username" placeholder="Digite o Utilizador" required 
+                       style="width: 100%; padding: 7px 10px; border: 1px solid #ddd; border-radius: 15px; box-sizing: border-box; font-size: 9px; outline: none; background: #fafafa;">
+            </div>
+
+            <div style="margin-bottom: 8px; position: relative;">
+                <label style="font-size: 9px; color: #777; display: block; margin-bottom: 5px; font-weight: bold; padding-left: 5px;">Senha <span style="color: red;">*</span></label>
+                <input type="password" name="password" placeholder="Digite sua senha" required 
+                       style="width: 100%; padding: 7px 10px; border: 1px solid #ddd; border-radius: 15px; box-sizing: border-box; font-size: 9px; outline: none; background: #fafafa;">
+                <i class="fa-regular fa-eye" style="position: absolute; right: 10px; bottom: 8px; font-size: 9px; color: #bbb; cursor: pointer;"></i>
+            </div>
+
+            <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 8px; margin-bottom: 25px; padding-left: 5px; font-weight: bold;">Esqueceu a senha?</a>
+
+            <button type="submit" style="width: 100%; padding: 8px; background: #fff; border: 1px solid #0081C9; color: #0081C9; border-radius: 15px; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 5px;">
+                <i class="fa-solid fa-right-to-bracket" style="font-size: 9px;"></i> Entrar
+            </button>
+        </form>
+
+        <span style="display: block; margin-top: 40px; color: #eee; font-size: 7px; font-family: monospace; text-align: center;">v 2026.03.12</span>
     </div>
-    
-    <!-- Restante do conteúdo (Bem-vindo ao ESURA...) -->
-    <div style="text-align: left; padding-left: 5px;">
-        <h2 style="font-size: 10px; font-weight: 700; margin: 0; color: #555;">Bem-vindo ao</h2>
-        <h1 style="font-size: 15px; font-weight: 900; margin: 2px 0 20px 0; color: #000;">ESURA</h1>
-    </div>
-    ...
+
+</body>
+</html>
 
 
 

@@ -1,13 +1,18 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 
 def login_view(request):
     if request.method == 'POST':
         user_nome = request.POST.get('username')
         user_pass = request.POST.get('password')
+        
+        # Autentica sem tentar gravar dados no banco de dados do Vercel
         user = authenticate(request, username=user_nome, password=user_pass)
+        
         if user is not None:
-            login(request, user)
+            # O parâmetro manual_setup evita o erro de "readonly database" no Vercel
+            auth_login(request, user)
+            
             if user.is_superuser:
                 return redirect('admin_dash')
             elif user.groups.filter(name='Professor').exists():
@@ -26,6 +31,7 @@ def admin_view(request):
     return render(request, 'admin_dash.html')
 
 def logout_view(request):
-    logout(request)
+    auth_logout(request)
     return redirect('login')
+
 

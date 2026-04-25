@@ -1,1 +1,40 @@
-<h1>Painel de Teste</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Estudante | ESURA</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body style="margin: 0; background: #fdfdfd; font-family: -apple-system, sans-serif;">
+
+    <!-- Barra de Topo -->
+    <div style="width: 100%; padding: 15px 20px; background: #fff; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+        <img src="{% static 'img/logo_ujc.png' %}" style="width: 60px;">
+        <div style="text-align: right;">
+            <p style="font-size: 11px; margin: 0; font-weight: bold; color: #333;">{{ user.username }}</p>
+            <a href="{% url 'login' %}" style="font-size: 10px; color: #0081C9; text-decoration: none;">Sair</a>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div style="max-width: 400px; margin: 20px auto; padding: 0 15px;">
+        <h2 style="font-size: 18px; color: #000; font-weight: 900;">Painel do Estudante</h2>
+        <p style="font-size: 12px; color: #666; margin-bottom: 25px;">Bem-vindo ao ESURA. Aqui estão as tuas informações.</p>
+
+        <!-- Cards de Ação Rápida -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div style="padding: 15px; background: #fff; border: 1px solid #eee; border-radius: 15px; text-align: center;">
+                <i class="fa-solid fa-book" style="color: #0081C9; margin-bottom: 8px;"></i>
+                <p style="font-size: 10px; margin: 0; font-weight: bold;">Disciplinas</p>
+            </div>
+            <div style="padding: 15px; background: #fff; border: 1px solid #eee; border-radius: 15px; text-align: center;">
+                <i class="fa-solid fa-graduation-cap" style="color: #0081C9; margin-bottom: 8px;"></i>
+                <p style="font-size: 10px; margin: 0; font-weight: bold;">Notas</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,1 +1,46 @@
-<h1>Painel de Teste</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Docente | ESURA</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body style="margin: 0; background: #f8f9fa; font-family: -apple-system, sans-serif;">
+
+    <!-- Navbar Professor -->
+    <div style="width: 100%; padding: 12px 25px; background: #07041b; color: #fff; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="{% static 'img/logo_ujc.png' %}" style="width: 40px; filter: brightness(0) invert(1);">
+            <span style="font-size: 14px; font-weight: bold; border-left: 1px solid #444; padding-left: 10px;">Docente</span>
+        </div>
+        <a href="{% url 'logout' %}" style="color: #fff; text-decoration: none; font-size: 12px; font-weight: bold;"> <i class="fas fa-power-off"></i> Sair</a>
+    </div>
+
+    <div style="max-width: 800px; margin: 30px auto; padding: 0 20px;">
+        <h2 style="color: #07041b; font-weight: 900;">Bem-vindo, Professor {{ user.username }}</h2>
+        <p style="color: #666; font-size: 13px;">Selecione uma turma para gerir notas e presenças.</p>
+
+        <!-- Lista de Turmas -->
+        <div style="margin-top: 30px; display: grid; gap: 15px;">
+            <div style="background: #fff; padding: 20px; border-radius: 15px; border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3 style="margin: 0; font-size: 14px; color: #333;">Engenharia de Software - 2º Ano</h3>
+                    <p style="margin: 5px 0 0 0; font-size: 11px; color: #999;">Disciplina: Programação Web</p>
+                </div>
+                <button style="padding: 8px 15px; background: #0081C9; color: #fff; border: none; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: pointer;">Lançar Notas</button>
+            </div>
+            
+            <div style="background: #fff; padding: 20px; border-radius: 15px; border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3 style="margin: 0; font-size: 14px; color: #333;">Sistemas de Informação - 1º Ano</h3>
+                    <p style="margin: 5px 0 0 0; font-size: 11px; color: #999;">Disciplina: Base de Dados</p>
+                </div>
+                <button style="padding: 8px 15px; background: #0081C9; color: #fff; border: none; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: pointer;">Lançar Notas</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

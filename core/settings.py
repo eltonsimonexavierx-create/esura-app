@@ -42,6 +42,13 @@ TEMPLATES = [{
 }]
 
 WSGI_APPLICATION = 'core.wsgi.application'
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
 
 # CONFIGURAÇÃO DE ESTÁTICOS - O FOCO É A TUA PASTA FÍSICA
 STATIC_URL = '/static/'

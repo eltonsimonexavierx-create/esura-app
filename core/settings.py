@@ -4,7 +4,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-chave-esura-2026'
 DEBUG = True # Mantemos True para veres o erro caso a imagem falte
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['esura-app.onrender.com', 'localhost', '127.0.0.1']
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',

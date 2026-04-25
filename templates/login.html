@@ -11,10 +11,10 @@
     <!-- Card Ultra Magro (150px) -->
     <div style="width: 150px; padding: 40px 10px; border: 1px solid #f2f2f2; border-radius: 25px; background: #fff; box-sizing: border-box;">
         
-        <!-- Logo: Aumentado para 140px para ocupar todo o espaço lateral -->
+        <!-- Logo: Centralizado com margens automáticas -->
         <img src="{% static 'img/logo_ujc.png' %}" style="width: 140px; height: auto; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">
         
-        <!-- Cabeçalho Alinhado à Esquerda -->
+        <!-- Cabeçalho Alinhado à Esquerda (conforme solicitado anteriormente) -->
         <div style="text-align: left; padding-left: 5px;">
             <h2 style="font-size: 11px; font-weight: 700; margin: 0; color: #555; letter-spacing: 0.1px;">Bem-vindo ao</h2>
             <h1 style="font-size: 16px; font-weight: 900; margin: 2px 0 25px 0; color: #000; letter-spacing: -0.5px;">ESURA</h1>
@@ -23,14 +23,12 @@
         <form method="POST" style="text-align: left;">
             {% csrf_token %}
             
-            <!-- Campo Utilizador/Email -->
             <div style="margin-bottom: 15px;">
                 <label style="font-size: 9px; color: #777; display: block; margin-bottom: 5px; font-weight: bold; padding-left: 5px;">Utilizador/Email</label>
                 <input type="text" name="username" placeholder="Digite o Utilizador" required 
                        style="width: 100%; padding: 7px 10px; border: 1px solid #ddd; border-radius: 15px; box-sizing: border-box; font-size: 9px; outline: none; background: #fafafa;">
             </div>
 
-            <!-- Campo Senha -->
             <div style="margin-bottom: 8px; position: relative;">
                 <label style="font-size: 9px; color: #777; display: block; margin-bottom: 5px; font-weight: bold; padding-left: 5px;">Senha <span style="color: red;">*</span></label>
                 <input type="password" name="password" placeholder="Digite sua senha" required 
@@ -40,7 +38,6 @@
 
             <a href="#" style="display: block; text-align: left; color: #0081C9; text-decoration: none; font-size: 8px; margin-bottom: 25px; padding-left: 5px; font-weight: bold;">Esqueceu a senha?</a>
 
-            <!-- Botão Entrar -->
             <button type="submit" style="width: 100%; padding: 8px; background: #fff; border: 1px solid #0081C9; color: #0081C9; border-radius: 15px; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 5px;">
                 <i class="fa-solid fa-right-to-bracket" style="font-size: 9px;"></i> Entrar
             </button>
@@ -51,7 +48,6 @@
 
 </body>
 </html>
-
 
 
 

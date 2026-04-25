@@ -1,13 +1,14 @@
+from django.contrib import admin
 from django.urls import path
-from . import views
+from . import views  # Importa as tuas views da pasta core
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.login_view, name='login'),
     path('estudante/', views.estudante_view, name='estudante_dash'),
     path('professor/', views.professor_view, name='professor_dash'),
     path('admin-esura/', views.admin_view, name='admin_dash'),
-    # ESTA LINHA É A QUE FALTA PARA O ERRO DESAPARECER:
-    path('logout/', views.logout_view, name='logout'), 
+    path('logout/', views.logout_view, name='logout'),
 ]
 
 
